@@ -2,7 +2,7 @@
 # More detailed instructions (including how to fill these variables for an # online workshop) are available at https://carpentries.github.io/workshop-template/customization/index.html#yaml-header
 # Required variables
 venue: "Ghana India Kofi Annan Centre of Excellence in ICT"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+address: "Haile Selassie St., opp. Council of State,PMB, State House, Accra – Ghana Digital Address: GA-079-3146"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "gh"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "5.559424"     # decimal latitude of workshop venue - this should be a number greater than or equal to -90, and less than or equal to 90 (use https://www.latlong.net/)
@@ -514,10 +514,8 @@ of code below the Schedule `<h2>` header below with
 
     {% if site.pilot %}
     The lesson taught in this workshop is being piloted and a precise schedule is yet to be established.
-    The workshop will include regular breaks. Please <a href="mailto:{{page.email}}">contact the workshop organisers</a> if you would like more information about the planned schedule.
+    The workshop will include regular breaks.
     {% endif %}
-  </div>
-</div>
 
 <hr/>
 
