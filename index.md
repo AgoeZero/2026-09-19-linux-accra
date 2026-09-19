@@ -216,10 +216,10 @@ address.
             Explain who your audience is.  (In particular, tell readers if the
             workshop is only open to people from a particular institution.
             {% endcomment %}
-            {% assign who_file = site.carpentry | append: '/who.html' %}
-            {% if isOfficial %}
-            {% include {{ who_file }} %}
-            {% endif %}    
+            The course is aimed at people interested in creating AI applications that will run on their mobile phones.
+            You don't need to have any previous knowledge of the tools that will be presented at the workshop. A laptop
+            or tablet with internet access is needed to take part in the workshop.  To test out the applications, a
+            device running Android is also needed, though these can be shared between participants.
         </dd>
     </div>
     <div class="row">
@@ -276,12 +276,14 @@ address.
             <p id="requirements">
             {% if online == "false" %}
                 Participants must bring a laptop with a
-                Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+                Mac, Linux, or Windows operating system or a tablet that they have administrative privileges on.
+                A tablet or phone using Android would also be useful for testing the applications, but these can
+                be shared between participants.
             {% else %}
                 Participants must have access to a computer with a
                 Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
             {% endif %}
-            They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+            They should have a web browser that can run javascript.
             </p>
         </dd>  
     </div>
@@ -296,23 +298,12 @@ address.
 
             <p id="accessibility">
             We are committed to making this workshop accessible to everybody. 
-            {% if online == "false" %}
-                The workshop organizers have checked that:
-                <br/>
-                <ul>
-                    <li>The room is wheelchair / scooter accessible.</li>
-                    <li>Accessible restrooms are available.</li>
-                </ul>
-            {% endif %}
             </p>
             <p>
             We are dedicated to providing a positive and accessible learning environment for all. 
             We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
             However, we do want to help create an inclusive, accessible experience for all participants. 
-            We encourage you to share any information that would be helpful to make your Carpentries experience accessible.
-            To request accessibility support for this workshop, please fill out the 
-            <a href="https://carpentries.typeform.com/to/B2OSYaD0">accessibility support request form</a>.
-            If you have questions or need assistance with the accessibility support form please <a href="mailto:team@carpentries.org">email us</a>.
+            We encourage you to share any information with your instructors that would be helpful to make your Carpentries experience accessible.
             </p>
             <p>
             <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary for computing and data science terms.
@@ -440,7 +431,7 @@ SURVEYS - DO NOT EDIT SURVEY LINKS
                 <h5 class="card-title">Pre-Workshop Survey</h5>
                 <p class="card-text">Please fill out this survey <strong>before attending</strong> the workshop.</p>
                 {% if site.carpentry == "incubator" %}
-                <a href="{{ site.incubator_pre_survey }}">Pre-workshop Survey</a>
+                <a href="https://carpentries.typeform.com/to/wi32rS?slug=2026-09-19-linux-accra">Pre-workshop Survey</a>
                 {% elsif site.incubator_pre_survey %}
                 <div class="alert alert-danger">
                 WARNING: you have defined custom pre- and/or post-survey links for
@@ -464,7 +455,7 @@ SURVEYS - DO NOT EDIT SURVEY LINKS
                 <h5 class="card-title">Post-Workshop Survey</h5>
                 <p class="card-text">Please fill out this survey <strong>before you leave</strong> the workshop.</p>
                 {% if site.carpentry == "incubator" %}
-                <a href="{{ site.incubator_post_survey }}">Post-workshop Survey</a>
+                <a href="https://carpentries.typeform.com/to/UgVdRQ?slug=2026-09-19-linux-accra">Post-workshop Survey</a>
                 {% elsif site.incubator_post_survey %}
                 <div class="alert alert-danger">
                 WARNING: you have defined custom pre- and/or post-survey links for
@@ -561,14 +552,17 @@ For online workshops, the section below provides:
 If you do not use Zoom for your online workshop, edit the file `_includes/install_instructions/videoconferencing.html` to include the relevant installation instructions.
 {% endcomment %}
 
-{% if online != "false" %}
-  {% include install_instructions/videoconferencing.html %}
-{% endif %}
 
 
 {% comment %}
-These are the installation instructions for the tools used during the workshop.
+{% if online != "false" %}
+  {% include install_instructions/videoconferencing.html %}
+{% endif %}
 {% endcomment %}
+
+{% comment %}
+These are the installation instructions for the tools used during the workshop.
+
 
 {% assign setup_file = site.carpentry | append: '/setup.html' %}
 {% if isOfficial %}
@@ -576,3 +570,7 @@ These are the installation instructions for the tools used during the workshop.
 {% elsif site.carpentry == "incubator" %}
   Please check the "Setup" page of <a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for instructions to follow to obtain the software and data you will need to follow the lesson.
 {% endif %}
+
+
+
+{% endcomment %}
